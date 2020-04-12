@@ -119,11 +119,16 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         performSegue(withIdentifier: "ListToDetail", sender: self)
     }
 
+    // prepare for transfer movie id from master view to detail view
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destVC = segue.destination as! MovieDetailViewController
-        destVC.movieId = self.movieId
+        if (segue.identifier == "ListToDetail"){
+            if let destVC = segue.destination as? MovieDetailViewController{
+                destVC.movieId = self.movieId
+            }
+        }
     
     }
+    
     
     ///--------------------------------------------------------------------------
     /// End of the Extension of the tableview

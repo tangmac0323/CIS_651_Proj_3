@@ -122,12 +122,16 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
         
         self.shapeLayer = CAShapeLayer()
         
-        let viewCenter = self.Rating_View.center
+        //let ratingViewCenter = self.Rating_View.center
         //let layer_x = viewCenter.x - 30
         //let layer_y = viewCenter.y - 30
         
         //print("\(layer_x), \(layer_y)")
         
+        // **************************
+        // USE RELATIVE COORDS HERE
+        // **************************
+        let ratingViewCenter = CGPoint(x: 30,y: 30)
         
         
         let animationDuration: CFTimeInterval = 0.8
@@ -135,7 +139,7 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
         let startingAngle = -CGFloat.pi / 2
         let endingAngle = CGFloat(rating) * 2 * CGFloat.pi / 10 - CGFloat.pi / 2
         
-        let circularPath = UIBezierPath(arcCenter: viewCenter, radius: 28, startAngle: startingAngle, endAngle: endingAngle, clockwise: true)
+        let circularPath = UIBezierPath(arcCenter: ratingViewCenter, radius: 28, startAngle: startingAngle, endAngle: endingAngle, clockwise: true)
         
         //self.shapeLayer?.backgroundColor = UIColor.black.cgColor
         // animate the circle
@@ -151,8 +155,9 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
         
         //self.shapeLayer?.frame = CGRect(x: layer_x, y: layer_y, width: 70, height: 70)
         
-        view.layer.addSublayer(self.shapeLayer!)
-        //self.Rating_View.layer.addSublayer(self.shapeLayer!)
+        
+        //view.layer.addSublayer(self.shapeLayer!)
+        self.Rating_View.layer.addSublayer(self.shapeLayer!)
         
         
         //print("Layer: \(self.shapeLayer?.frame)")

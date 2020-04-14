@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>699974020019-32ojn0scb92fi19u6l7oi0cmrhljog13.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.699974020019-32ojn0scb92fi19u6l7oi0cmrhljog13</string>
+	<key>API_KEY</key>
+	<string>AIzaSyA0SBOyBdBpu0ipCnLt_T4-MSN8xenLeMA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>699974020019</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>Mengtao.CIS-651-HW4</string>
+	<key>PROJECT_ID</key>
+	<string>cis651-hw4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>cis651-hw4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:699974020019:ios:ff09470a39239ced32f9c6</string>
+	<key>DATABASE_URL</key>
+	<string>https://cis651-hw4.firebaseio.com</string>
+</dict>
+</plist>

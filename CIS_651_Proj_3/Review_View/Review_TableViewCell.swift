@@ -14,6 +14,7 @@ class ReviewTableViewCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var UserPortrait_ImageView: UIImageView!
     
     @IBOutlet weak var Nickname_Label: UILabel!
+    @IBOutlet weak var Date_Label: UILabel!
     @IBOutlet weak var ReviewContent_TextView: UITextView!
     
     @IBOutlet weak var RatingLike_ImageView: UIImageView!
@@ -26,15 +27,19 @@ class ReviewTableViewCell: UITableViewCell, UITextViewDelegate {
         super.awakeFromNib()
         
         ReviewContent_TextView.delegate = self
+        
+        Nickname_Label.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        Date_Label.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        ReviewContent_TextView.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        //ReviewContent_TextView.translatesAutoresizingMaskIntoConstraints = true
+        //ReviewContent_TextView.sizeToFit()
+        //ReviewContent_TextView.isScrollEnabled = false
+    }
+    
+    func adjustUITextViewHeight() {
         ReviewContent_TextView.translatesAutoresizingMaskIntoConstraints = true
         ReviewContent_TextView.sizeToFit()
         ReviewContent_TextView.isScrollEnabled = false
-    }
-    
-    func adjustUITextViewHeight(textView : UITextView) {
-        textView.translatesAutoresizingMaskIntoConstraints = true
-        textView.sizeToFit()
-        textView.isScrollEnabled = false
     }
     
 }

@@ -14,6 +14,9 @@ class UserProfileFirebaseModel {
     // *********************************************************************************
     // extract nick name by user id from users collection
     // *********************************************************************************
+    func GetNickNameFromFirebaseByUserId(userId : String, CompletionHandler : @escaping (String?, Error?) -> Void) {
+        
+    }
     
     // *********************************************************************************
     // upload image from camera roll
@@ -68,8 +71,12 @@ class UserProfileFirebaseModel {
             }
             else{
                 
-                // display the image
+                // display the image and set the image
                 imageView.image = UIImage(data: image!)
+                imageView.layer.cornerRadius = (imageView.frame.size.width ?? 0.0) / 2
+                imageView.clipsToBounds = true
+                imageView.layer.borderWidth = 1.0
+                imageView.layer.borderColor = UIColor.white.cgColor
                 //print("UserProfile_View/UserProfile_ViewController.swift - func DownloadImageFromFirebaseStorage() - Download Succeed")
             }
         }

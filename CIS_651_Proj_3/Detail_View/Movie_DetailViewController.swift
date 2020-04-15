@@ -19,6 +19,7 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
     @IBOutlet weak var OverviewTag_Label: UILabel!
     @IBOutlet weak var Overview_TextField: UITextView!
     @IBOutlet weak var Rating_View: RatingView!
+    @IBOutlet weak var Review_Button: UIButton!
     
     @IBOutlet weak var Rating_Portrait_X: NSLayoutConstraint!
     @IBOutlet weak var Rating_Landscape_X: NSLayoutConstraint!
@@ -27,7 +28,13 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
     
     
     
-    var movieId:Int = 0
+    
+    // declare variable pass to the review view
+    let movieFirebaseModel = MovieFirebaseModel()
+    var movieId : Int = 0
+    var numOfRowInSection : Int = 0
+    
+    
     var tmdbDetailModel: MovieDetailCVModel?
     var imageList: [String] = []        // store the image that will be posted in collection view
     var ratingVal: Float = 0
@@ -92,7 +99,7 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
             
             self.tmdbDetailModel?.download_ImageList {
                 // do nothing
-                print("Image List download completed")
+                //print("Image List download completed")
                 
                 /*
                 for backdrop in (self.tmdbDetailModel?.imageResults?.backdrops)!{
@@ -103,7 +110,7 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
                 //print(self.imageList)
                 
                             // reload the view
-                print("Reload Collection View")
+                //print("Reload Collection View")
                 self.MovieImageCollectionView.reloadData()
             }
             
@@ -200,7 +207,9 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
     // show the percentage of the rating value
     
     func animationDidStop(_ anim: CAAnimation, finished flag: Bool) {
-        print("Animation done")
+        
+        //print("Animation done")
+        
         let viewCenter = self.Rating_View.center
         let ratingLabel = UILabel.init()
         ratingLabel.text = "\(Int(self.ratingVal*10))%"
@@ -302,6 +311,27 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
         */
         
         //self.MovieImageCollectionView?.collectionViewLayout.invalidateLayout();
+    }
+    
+    // *********************************************************************************
+    // fucntion to transit to review view
+    // *********************************************************************************
+    @IBAction func ReviewButton_Tapped(_ sender: Any) {
+
+        
+        self.performSegue(withIdentifier: "MovieDetailToReview", sender: self)
+    }
+    
+    // prepare for transfer movie id from detail view to review view
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "MovieDetailToReview"){
+            if let destVC = segue.destination as? Review_TablerViewController{
+                destVC.movieId = self.movieId
+                //destVC.numOfRowInSection = self.numOfRowInSection
+                //print(destVC.movieId)
+            }
+        }
+    
     }
  
     

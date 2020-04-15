@@ -71,6 +71,13 @@ class UserProfile_ViewController: UIViewController {
         loadUserInfoFromDB()
         self.userProfileFirebaseModel.DownloadImageFromFirebaseStorage(userId: Auth.auth().currentUser!.uid, imageView: self.UserProfilePortrait_ImageView)
         
+        /*
+        self.UserProfilePortrait_ImageView.layer.borderWidth = 1.0
+        self.UserProfilePortrait_ImageView.layer.masksToBounds = false
+        self.UserProfilePortrait_ImageView.layer.borderColor = UIColor.white.cgColor
+        self.UserProfilePortrait_ImageView.layer.cornerRadius = 60
+        */
+        
         // lay down the upload flag
         self.GlobalUserPortraitChangeFlag = 0
     }

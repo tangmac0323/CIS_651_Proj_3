@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643CB0F32447181100D0B00D /* EditReview_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643CB0F22447181100D0B00D /* EditReview_ViewController.swift */; };
 		64722A432405F40D00466ABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64722A422405F40D00466ABE /* AppDelegate.swift */; };
 		64722A452405F40D00466ABE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64722A442405F40D00466ABE /* SceneDelegate.swift */; };
 		64722A4A2405F40D00466ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64722A482405F40D00466ABE /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		643CB0F22447181100D0B00D /* EditReview_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReview_ViewController.swift; sourceTree = "<group>"; };
 		64722A3F2405F40D00466ABE /* CIS_651_Proj_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIS_651_Proj_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64722A422405F40D00466ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64722A442405F40D00466ABE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			children = (
 				64BCAA3F2442E69F00CFC15C /* Review_TablerViewController.swift */,
 				64BCAA532446D22200CFC15C /* Review_TableViewCell.swift */,
+				643CB0F22447181100D0B00D /* EditReview_ViewController.swift */,
 			);
 			path = Review_View;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				64BCAA3E244270E500CFC15C /* UserProfile_ViewController.swift in Sources */,
 				64722A68240807EE00466ABE /* Movie_DetailCVCell.swift in Sources */,
 				64722A432405F40D00466ABE /* AppDelegate.swift in Sources */,
+				643CB0F32447181100D0B00D /* EditReview_ViewController.swift in Sources */,
 				64BCAA482443BB5700CFC15C /* SignUp_ViewController.swift in Sources */,
 				64722A66240771CE00466ABE /* MovieDetailCVModel.swift in Sources */,
 				64BCAA5024461BFB00CFC15C /* UserProfileFirebaseModel.swift in Sources */,

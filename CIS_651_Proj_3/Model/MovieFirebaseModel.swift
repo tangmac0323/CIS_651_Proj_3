@@ -15,7 +15,7 @@ class MovieFirebaseModel {
     // *********************************************************************************
     // function to retrieve the number of reviews by movieId
     // *********************************************************************************
-    func RetrieveReviewNumByMovieId(movieId : Int) -> Int {
+    func RetrieveReviewNumByMovieId(movieId : Int, revCompletionHandler: @escaping (Int?, Error?) -> Void){
         
         var revCount : Int = 0
         let db = Firestore.firestore()
@@ -27,6 +27,7 @@ class MovieFirebaseModel {
             // catch the error
             if error != nil {
                 print(error as Any)
+                revCompletionHandler(nil, error)
             }
             else{
                 // check if the document exist
@@ -36,25 +37,32 @@ class MovieFirebaseModel {
                         // try to get the counts field value
                         if let counts = reviewInfo[MovieAppFirebaseConstants.MovieDatabaseAttribute.ReviewCounts]{
                             revCount = counts as! Int
+                            //print("revCount: \(revCount)")
+                            revCompletionHandler(revCount, nil)
                         }
                     }
+                    else{
+                        print("MovieFirebasemodel - RetrieveReviewNumByMovieId() - Movies.Document.Data Failed to Retrieve")
+                    }
+                }
+                else{
+                    print("MovieFirebasemodel - RetrieveReviewNumByMovieId() - Movies.Document Does Not Exist")
                 }
             }
             
         }
-        
-        return revCount
+        //print("revCount Return: \(revCount)")
+        //return revCount
     }
     
     
     // *********************************************************************************
     // function to retrieve all the reviews document from the database by movieId
     // *********************************************************************************
-    func RetrieveAllReviewsByMovieId(movieId : Int) -> QuerySnapshot {
-        
+    func RetrieveAllReviewsByMovieId(movieId : Int, CompletionHandler: @escaping (QuerySnapshot?, Error?) -> Void) {
         
         // declare the return object
-        var docQuery : QuerySnapshot!
+        //var docQuery : QuerySnapshot!
         
         // createa a reference to the database
         let db = Firestore.firestore()
@@ -64,17 +72,19 @@ class MovieFirebaseModel {
             // catch the error
             if error != nil {
                 print(error as Any)
+                CompletionHandler(nil, error)
             }
             else{
                 // check if the document exist
                 if let querySnapshot = querySnapshot {
                     // try to retrieve the data
-                    docQuery = querySnapshot
+                    //docQuery = querySnapshot
+                    CompletionHandler(querySnapshot, nil)
                 }
             }
         }
         
-        return docQuery
+        //return docQuery
         
     }
     
@@ -87,8 +97,8 @@ class MovieFirebaseModel {
         
         // get current date
         let dateTime = GetCurrentDateFormatted()
-        let likeUserIdList = [Int]()
-        let dislikeUserIdList = [Int]()
+        let likeUserIdList = [String]()
+        let dislikeUserIdList = [String]()
 
         let docRef = db.collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.CollectionID).document(String(movieId)).collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.SubCollectionID_Review).document(userId).setData([
             MovieAppFirebaseConstants.MovieDatabaseAttribute.ReviewDatabaseAttribute.Content : content,
@@ -115,6 +125,13 @@ class MovieFirebaseModel {
         
         // get current date
         let dateTime = GetCurrentDateFormatted()
+        
+        let docRef = db.collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.CollectionID).document(String(userId)).collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.SubCollectionID_Review).document(userId)
+        
+        docRef.updateData([
+            MovieAppFirebaseConstants.MovieDatabaseAttribute.ReviewDatabaseAttribute.Date : dateTime,
+            MovieAppFirebaseConstants.MovieDatabaseAttribute.ReviewDatabaseAttribute.Content : content
+        ])
         
         
         
@@ -158,7 +175,8 @@ class MovieFirebaseModel {
     // *********************************************************************************
     // function to retrieve review by movied and userid
     // *********************************************************************************
-    func RetrieveReviewByMovieIdByUserId(movieId : Int, userId : String) -> [String : Any] {
+    func RetrieveReviewByMovieIdByUserId(movieId : Int, userId : String, CompletionHandler : @escaping ([String : Any]?, Error?) -> Void){
+        
         
         var reviewDocData : [String : Any]!
         
@@ -167,26 +185,39 @@ class MovieFirebaseModel {
         
         // create a reference
         let movieDocRef = db.collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.CollectionID).document(String(movieId))
-        
+                
         movieDocRef.getDocument { (movieDoc, error) in
             
-            // check if movie document exist by id
-            if let movieDoc = movieDoc, movieDoc.exists {
-                
-                // check if review collection exist
-                let reviewDocRef = movieDocRef.collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.ReviewDatabaseAttribute.CollectionID).document(userId)
-                
-                reviewDocRef.getDocument { (reviewDoc, reviewError) in
+            if error != nil {
+                print(error as! String)
+            }
+            else {
+                // check if movie document exist by id
+                if let movieDoc = movieDoc, movieDoc.exists {
                     
-                    // check if review exist
-                    if let reviewDoc = reviewDoc, reviewDoc.exists {
-                        reviewDocData = reviewDoc.data()
+                    // check if review collection exist
+                    let reviewDocRef = movieDocRef.collection(MovieAppFirebaseConstants.MovieDatabaseAttribute.ReviewDatabaseAttribute.CollectionID).document(userId)
+                    
+                    reviewDocRef.getDocument { (reviewDoc, reviewError) in
+                        
+                        if reviewError != nil {
+                            print(reviewError as! String)
+                        }
+                        else{
+                            // check if review exist
+                            if let reviewDoc = reviewDoc, reviewDoc.exists {
+                                reviewDocData = reviewDoc.data()
+                                CompletionHandler(reviewDocData, nil)
+                            }
+                        }
                     }
                 }
             }
         }
         
-        return reviewDocData
+        //print(reviewDocData)
+        
+        //return reviewDocData
     }
     
     // *********************************************************************************

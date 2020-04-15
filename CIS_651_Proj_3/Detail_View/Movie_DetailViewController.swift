@@ -205,7 +205,7 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
         let ratingLabel = UILabel.init()
         ratingLabel.text = "\(Int(self.ratingVal*10))%"
         ratingLabel.font = UIFont(name: "verdana-bold", size: 10)
-        ratingLabel.frame = CGRect(x: viewCenter.x-20, y: viewCenter.y-10, width: 40, height:20)
+        ratingLabel.frame = CGRect(x: viewCenter.x - 30, y: viewCenter.y - 20, width: 40, height:20)
         ratingLabel.textAlignment = .center
         ratingLabel.textColor = .yellow
         self.view.addSubview(ratingLabel)

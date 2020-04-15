@@ -37,8 +37,10 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         MovieTableView.delegate = self
         
         self.tmdbModel = MovieDataBaseModel(viewLink: MovieTableView)
+        
         //MovieTableView.estimatedRowHeight = 100
         //MovieTableView.rowHeight = 15 * UIScreen.main.bounds.height /  100      // set the height of each cell to 20% of the main screen
+        
         let urlKeyStr = self.MovieNavSeg.getSelectedItemStr()
         //print("JSON STARTED")
         self.tmdbModel?.download_PopularMovie(urlKey: urlKeyStr) {
@@ -74,7 +76,9 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
     // function to decide the total row of the table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         let cellRow = self.tmdbModel?.results?.results.count ?? 0
-        print(cellRow)
+        
+        //print(cellRow)
+        
         return cellRow
     }
     
@@ -102,7 +106,7 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
         
         //print(poster_path)
-        print("At row: \(indexPath.row)")
+        //print("At row: \(indexPath.row)")
         //self.TMDBModel?.download_Poster(imagePostFix: poster_path, to: cell.MovieImageView)
         self.tmdbModel?.download_Poster(from: poster_path ?? (self.tmdbModel?.default_poster_path)!, imageView: cell.MovieImageView)
         return cell
@@ -124,6 +128,7 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         if (segue.identifier == "ListToDetail"){
             if let destVC = segue.destination as? MovieDetailViewController{
                 destVC.movieId = self.movieId
+                print(destVC.movieId)
             }
         }
     

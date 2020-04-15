@@ -87,7 +87,7 @@ class SignUp_ViewController: UIViewController{
     // fucntion to make segue transition to login screen from sign up screen
     // *********************************************************************************
     func SignUpScreenToLoginScreen() {
-        let loginVC = storyboard?.instantiateViewController(identifier:Constants.StoryboardId.LoginViewController) as? LoginMenu_ViewController
+        let loginVC = storyboard?.instantiateViewController(identifier:MovieAppFirebaseConstants.StoryboardId.LoginViewController) as? LoginMenu_ViewController
         
         
         self.view.window?.rootViewController = loginVC
@@ -125,7 +125,7 @@ class SignUp_ViewController: UIViewController{
                     //var ref: DocumentReference? = nil
                     
                     // set the document id to be user id
-                    db.collection("users").document(result!.user.uid).setData([Constants.UserDatabaseAttribute.FirstName:firstname, Constants.UserDatabaseAttribute.LastName:lastname, Constants.UserDatabaseAttribute.UserID:result!.user.uid]) {
+                    db.collection("users").document(result!.user.uid).setData([MovieAppFirebaseConstants.UserDatabaseAttribute.FirstName:firstname, MovieAppFirebaseConstants.UserDatabaseAttribute.LastName:lastname, MovieAppFirebaseConstants.UserDatabaseAttribute.UserID:result!.user.uid, MovieAppFirebaseConstants.UserDatabaseAttribute.EmailAddress:email]) {
                         
                         (error) in
                         

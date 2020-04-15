@@ -11,5 +11,6 @@ target 'CIS_651_Proj_3' do
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Storage'
 
 end

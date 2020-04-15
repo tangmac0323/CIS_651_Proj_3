@@ -9,6 +9,16 @@
 import UIKit
 
 class Review_TablerViewController: UITableViewController {
+    
+    // declare reusable identifier
+    let ReusableCellIdentifier = "ReviewTableReuseCell"
+    
+    // declare the model
+    let userProfileFirebaseModel = UserProfileFirebaseModel()
+    let movieFireBaseModel = MovieFirebaseModel()
+    
+    // declare movieId
+    var MovieId : Int = -1
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,27 +28,42 @@ class Review_TablerViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
     }
 
-    // MARK: - Table view data source
+    ///--------------------------------------------------------------------------
+    /// Extension of the tableview
+    ///--------------------------------------------------------------------------
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
+    // function to decide the total row of the table view
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        var numOfRowInSection : Int = 10
+        
+        //numOfSection = movieFireBaseModel.RetrieveReviewNumByMovieId(movieId: self.MovieId)
+        
+        print("Review_TableViewController - func numOfSections() - numOfRowInSection: \(numOfRowInSection)")
+        
+        return numOfRowInSection
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: self.ReusableCellIdentifier, for: indexPath) as! ReviewTableViewCell
+        
         // Configure the cell...
 
         return cell
+    }
+    
+    /*
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return       // set the height of each cell to 15% of the main screen
     }
     */
 

@@ -39,7 +39,7 @@ class LoginMenu_ViewController: UIViewController {
     // fucntion to make segue transition to master screen from login screen
     // *********************************************************************************
     func LoginScreenToMasterScreen() {
-        let masterViewTBController = self.storyboard?.instantiateViewController(identifier: Constants.StoryboardId.MasterViewTabBarController) as? UITabBarController
+        let masterViewTBController = self.storyboard?.instantiateViewController(identifier: MovieAppFirebaseConstants.StoryboardId.MasterViewTabBarController) as? UITabBarController
         
         self.view.window?.rootViewController = masterViewTBController
         self.view.window?.makeKeyAndVisible()

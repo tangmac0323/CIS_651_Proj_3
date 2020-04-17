@@ -23,6 +23,9 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
     //var movies: [MovieCell] = []
     var movieId: Int = 0   // global variable to save the movie id on click
     
+    // declare the model
+    let movieReviewFirebaseModel = MovieReviewFirebaseModel()
+    
     
     override func viewWillAppear(_ animated: Bool) {
         //self.view.layer.allowsGroupOpacity = true
@@ -101,9 +104,21 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         let movieTitle = movie?.title
         let poster_path = movie?.poster_path
         let overview = movie?.overview
+        
         cell.MovieTitleLabel.text = movieTitle
         cell.MovieOverviewLabel.text = overview
         cell.backgroundColor = UIColor(white: 1, alpha: 0.3)
+        
+        // get the review count
+        self.movieReviewFirebaseModel.getReviewCountByMovieId(movieId: (movie?.id)!) { (reviewCounts) in
+            if reviewCounts == nil {
+                cell.MovieReviewCountLabel.text = "review (0)"
+            }
+            else{
+                let counts = reviewCounts!
+                cell.MovieReviewCountLabel.text = "review (\(String(describing: counts)))"
+            }
+        }
         
         //print(poster_path)
         //print("At row: \(indexPath.row)")
@@ -128,7 +143,7 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         if (segue.identifier == "ListToDetail"){
             if let destVC = segue.destination as? MovieDetailViewController{
                 destVC.movieId = self.movieId
-                print(destVC.movieId)
+                //print(destVC.movieId)
             }
         }
     

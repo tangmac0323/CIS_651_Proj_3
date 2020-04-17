@@ -16,6 +16,30 @@ class UserProfileFirebaseModel {
     // *********************************************************************************
     func GetNickNameFromFirebaseByUserId(userId : String, CompletionHandler : @escaping (String?, Error?) -> Void) {
         
+        // createa a reference to firestore
+        let db = Firestore.firestore()
+        
+        
+        
+        // create a reference to the corresponding document by user id from the Users collection
+        let docRef = db.collection(MovieAppFirebaseConstants.UserDatabaseAttribute.CollectionID).document(userId)
+        
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                if let userInfo = document.data() {
+                    if let userNickname = userInfo[MovieAppFirebaseConstants.UserDatabaseAttribute.NickName]{
+                        CompletionHandler(userNickname as? String, nil)
+                    }
+                    else {
+                        CompletionHandler(nil, error)
+                    }
+                }
+            }
+            else{
+                CompletionHandler(nil, error)
+            }
+        }
+        
     }
     
     // *********************************************************************************
@@ -60,7 +84,7 @@ class UserProfileFirebaseModel {
         let storageRef = storage.reference()
         
         // create image path string
-        let imagePath = MovieAppFirebaseConstants.UserDatabaseAttribute.UserProfilePortraitPathPrefix + MovieAppFirebaseConstants.UserDatabaseAttribute.UserProfilePortraitFilePrefix + Auth.auth().currentUser!.uid + MovieAppFirebaseConstants.UserDatabaseAttribute.UserProfilePortraitFileType
+        let imagePath = MovieAppFirebaseConstants.UserDatabaseAttribute.UserProfilePortraitPathPrefix + MovieAppFirebaseConstants.UserDatabaseAttribute.UserProfilePortraitFilePrefix + userId + MovieAppFirebaseConstants.UserDatabaseAttribute.UserProfilePortraitFileType
         
         // try to download the file and display in the image view
         storageRef.child(imagePath).getData(maxSize: Int64(MovieAppFirebaseConstants.UserDatabaseAttribute.MaxUploadImageSize)) { (image, error) in

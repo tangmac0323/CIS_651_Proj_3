@@ -30,7 +30,7 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
     
     
     // declare variable pass to the review view
-    let movieFirebaseModel = MovieFirebaseModel()
+    let movieFirebaseModel = MovieReviewFirebaseModel()
     var movieId : Int = 0
     var numOfRowInSection : Int = 0
     

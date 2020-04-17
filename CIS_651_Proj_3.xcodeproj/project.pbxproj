@@ -24,14 +24,14 @@
 		64722A6C240AD23000466ABE /* Rating_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64722A6B240AD23000466ABE /* Rating_View.swift */; };
 		64722A70240AFDC700466ABE /* Movie_SegController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64722A6F240AFDC700466ABE /* Movie_SegController.swift */; };
 		64BCAA3E244270E500CFC15C /* UserProfile_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA3D244270E500CFC15C /* UserProfile_ViewController.swift */; };
-		64BCAA402442E69F00CFC15C /* Review_TablerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA3F2442E69F00CFC15C /* Review_TablerViewController.swift */; };
+		64BCAA402442E69F00CFC15C /* Review_TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA3F2442E69F00CFC15C /* Review_TableViewController.swift */; };
 		64BCAA452443BAA200CFC15C /* LoginMenu_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA442443BAA200CFC15C /* LoginMenu_ViewController.swift */; };
 		64BCAA482443BB5700CFC15C /* SignUp_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA472443BB5700CFC15C /* SignUp_ViewController.swift */; };
 		64BCAA4A2443C74B00CFC15C /* Authentication_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA492443C74B00CFC15C /* Authentication_Model.swift */; };
 		64BCAA4C2443D44900CFC15C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BCAA4B2443D44900CFC15C /* GoogleService-Info.plist */; };
 		64BCAA4E24440AFF00CFC15C /* MovieAppFirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA4D24440AFF00CFC15C /* MovieAppFirebaseConstant.swift */; };
 		64BCAA5024461BFB00CFC15C /* UserProfileFirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA4F24461BFB00CFC15C /* UserProfileFirebaseModel.swift */; };
-		64BCAA52244679F900CFC15C /* MovieFirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA51244679F900CFC15C /* MovieFirebaseModel.swift */; };
+		64BCAA52244679F900CFC15C /* MovieReviewFirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA51244679F900CFC15C /* MovieReviewFirebaseModel.swift */; };
 		64BCAA542446D22200CFC15C /* Review_TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA532446D22200CFC15C /* Review_TableViewCell.swift */; };
 		84255CEFCD9B3F58C8FD94B2 /* Pods_CIS_651_Proj_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 886C0DD0DDA6159BE1A0FDF9 /* Pods_CIS_651_Proj_3.framework */; };
 /* End PBXBuildFile section */
@@ -56,14 +56,14 @@
 		64722A6B240AD23000466ABE /* Rating_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rating_View.swift; sourceTree = "<group>"; };
 		64722A6F240AFDC700466ABE /* Movie_SegController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie_SegController.swift; sourceTree = "<group>"; };
 		64BCAA3D244270E500CFC15C /* UserProfile_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile_ViewController.swift; sourceTree = "<group>"; };
-		64BCAA3F2442E69F00CFC15C /* Review_TablerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review_TablerViewController.swift; sourceTree = "<group>"; };
+		64BCAA3F2442E69F00CFC15C /* Review_TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review_TableViewController.swift; sourceTree = "<group>"; };
 		64BCAA442443BAA200CFC15C /* LoginMenu_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMenu_ViewController.swift; sourceTree = "<group>"; };
 		64BCAA472443BB5700CFC15C /* SignUp_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_ViewController.swift; sourceTree = "<group>"; };
 		64BCAA492443C74B00CFC15C /* Authentication_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication_Model.swift; sourceTree = "<group>"; };
 		64BCAA4B2443D44900CFC15C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64BCAA4D24440AFF00CFC15C /* MovieAppFirebaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppFirebaseConstant.swift; sourceTree = "<group>"; };
 		64BCAA4F24461BFB00CFC15C /* UserProfileFirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFirebaseModel.swift; sourceTree = "<group>"; };
-		64BCAA51244679F900CFC15C /* MovieFirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFirebaseModel.swift; sourceTree = "<group>"; };
+		64BCAA51244679F900CFC15C /* MovieReviewFirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewFirebaseModel.swift; sourceTree = "<group>"; };
 		64BCAA532446D22200CFC15C /* Review_TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review_TableViewCell.swift; sourceTree = "<group>"; };
 		886C0DD0DDA6159BE1A0FDF9 /* Pods_CIS_651_Proj_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CIS_651_Proj_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C4B8881F76BFF7B52E2A64B /* Pods-CIS_651_Proj_3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CIS_651_Proj_3.release.xcconfig"; path = "Target Support Files/Pods-CIS_651_Proj_3/Pods-CIS_651_Proj_3.release.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +150,7 @@
 				64BCAA492443C74B00CFC15C /* Authentication_Model.swift */,
 				64BCAA4D24440AFF00CFC15C /* MovieAppFirebaseConstant.swift */,
 				64BCAA4F24461BFB00CFC15C /* UserProfileFirebaseModel.swift */,
-				64BCAA51244679F900CFC15C /* MovieFirebaseModel.swift */,
+				64BCAA51244679F900CFC15C /* MovieReviewFirebaseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,7 +168,7 @@
 		64BCAA3B24414E8C00CFC15C /* Review_View */ = {
 			isa = PBXGroup;
 			children = (
-				64BCAA3F2442E69F00CFC15C /* Review_TablerViewController.swift */,
+				64BCAA3F2442E69F00CFC15C /* Review_TableViewController.swift */,
 				64BCAA532446D22200CFC15C /* Review_TableViewCell.swift */,
 				643CB0F22447181100D0B00D /* EditReview_ViewController.swift */,
 			);
@@ -332,7 +332,7 @@
 				64722A5F24060B0A00466ABE /* MovieAttribute.swift in Sources */,
 				64722A61240615B200466ABE /* MovieDataBaseModel.swift in Sources */,
 				64BCAA542446D22200CFC15C /* Review_TableViewCell.swift in Sources */,
-				64BCAA52244679F900CFC15C /* MovieFirebaseModel.swift in Sources */,
+				64BCAA52244679F900CFC15C /* MovieReviewFirebaseModel.swift in Sources */,
 				64BCAA4A2443C74B00CFC15C /* Authentication_Model.swift in Sources */,
 				64BCAA3E244270E500CFC15C /* UserProfile_ViewController.swift in Sources */,
 				64722A68240807EE00466ABE /* Movie_DetailCVCell.swift in Sources */,
@@ -341,7 +341,7 @@
 				64BCAA482443BB5700CFC15C /* SignUp_ViewController.swift in Sources */,
 				64722A66240771CE00466ABE /* MovieDetailCVModel.swift in Sources */,
 				64BCAA5024461BFB00CFC15C /* UserProfileFirebaseModel.swift in Sources */,
-				64BCAA402442E69F00CFC15C /* Review_TablerViewController.swift in Sources */,
+				64BCAA402442E69F00CFC15C /* Review_TableViewController.swift in Sources */,
 				64722A452405F40D00466ABE /* SceneDelegate.swift in Sources */,
 				64722A70240AFDC700466ABE /* Movie_SegController.swift in Sources */,
 				64722A6C240AD23000466ABE /* Rating_View.swift in Sources */,

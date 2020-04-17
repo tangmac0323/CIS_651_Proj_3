@@ -54,7 +54,13 @@ struct MovieAppFirebaseConstants {
             static let UserId = "userId"
             //static let Counts = "counts"
             static let LikeUserList = "like_user_list"
-            static let DisUserlikeList = "dislike_user_list"
+            static let DislikeUserList = "dislike_user_list"
         }
+    }
+    
+    enum ReviewRatingStatus {
+        case LIKE
+        case DISLIKE
+        case UNRATED
     }
 }

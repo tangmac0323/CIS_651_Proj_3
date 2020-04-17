@@ -11,7 +11,7 @@ import UIKit
 
 class MovieDataBaseModel {
     
-    fileprivate var api_key: String = ""
+    fileprivate var api_key: String = "3e8f10a4cd5f8fea677657f9aedb1efd"
     
     var results: TMDBResult?    // data fetch from the url request
     var viewLink: UITableView?

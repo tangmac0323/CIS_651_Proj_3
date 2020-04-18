@@ -92,7 +92,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="NVO-Vl-4Cl">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="jNf-fX-OUz" customClass="MovieSegController" customModule="CIS_651_Proj_3" customModuleProvider="target">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="jNf-fX-OUz" customClass="MovieSegController" customModule="CIS_651_Proj_3" customModuleProvider="target">
                             <rect key="frame" x="15.666666666666657" y="6" width="383" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -160,10 +160,10 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <constraints>
-                                            <constraint firstItem="V9e-Kc-waY" firstAttribute="top" secondItem="KgX-Gv-lk3" secondAttribute="topMargin" constant="-8" id="Qhd-G1-BLS"/>
-                                            <constraint firstItem="V9e-Kc-waY" firstAttribute="leading" secondItem="KgX-Gv-lk3" secondAttribute="leadingMargin" constant="-8" id="aGA-Me-VNP"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="V9e-Kc-waY" secondAttribute="trailing" constant="-8" id="bUu-aU-4NH"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="V9e-Kc-waY" secondAttribute="bottom" constant="-8" id="ozp-cU-uLI"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="V9e-Kc-waY" secondAttribute="bottom" constant="-8" id="3hc-iw-WIq"/>
+                                            <constraint firstItem="V9e-Kc-waY" firstAttribute="leading" secondItem="KgX-Gv-lk3" secondAttribute="leadingMargin" constant="-8" id="EcT-K2-Rq5"/>
+                                            <constraint firstItem="V9e-Kc-waY" firstAttribute="top" secondItem="KgX-Gv-lk3" secondAttribute="topMargin" constant="-8" id="NVw-tJ-3IF"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="V9e-Kc-waY" secondAttribute="trailing" constant="-8" id="VKL-2q-VKf"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="MovieDetailImage" destination="LoJ-qG-ARM" id="t7x-jc-eUf"/>
@@ -650,7 +650,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="FRg-h6-2VV" userLabel="User Information Stack View">
-                                <rect key="frame" x="40" y="323" width="334" height="390"/>
+                                <rect key="frame" x="40" y="403" width="334" height="390"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZ1-jc-9xC">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -721,7 +721,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="WJa-Y5-Scm" firstAttribute="bottom" secondItem="FRg-h6-2VV" secondAttribute="bottom" constant="100" id="1mI-Zy-fCT"/>
+                            <constraint firstItem="WJa-Y5-Scm" firstAttribute="bottom" secondItem="FRg-h6-2VV" secondAttribute="bottom" constant="20" id="1mI-Zy-fCT"/>
                             <constraint firstItem="Ghe-6e-loo" firstAttribute="top" secondItem="WJa-Y5-Scm" secondAttribute="top" constant="60" id="Fhj-o5-Xlv"/>
                             <constraint firstItem="WJa-Y5-Scm" firstAttribute="trailing" secondItem="FRg-h6-2VV" secondAttribute="trailing" constant="40" id="LQa-RU-UmJ"/>
                             <constraint firstItem="FRg-h6-2VV" firstAttribute="leading" secondItem="WJa-Y5-Scm" secondAttribute="leading" constant="40" id="Uva-MW-i7e"/>
@@ -793,12 +793,13 @@
                                         <rect key="frame" x="0.0" y="180" width="334" height="40"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Don't have an account yet?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pt2-0a-x1W">
-                                                <rect key="frame" x="0.0" y="0.0" width="200.33333333333334" height="40"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="233.66666666666666" height="40"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-1d-KqS" userLabel="Sign up">
-                                                <rect key="frame" x="205.33333333333337" y="0.0" width="128.66666666666663" height="40"/>
+                                                <rect key="frame" x="238.66666666666671" y="0.0" width="95.333333333333343" height="40"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <state key="normal" title="Sign up"/>
                                                 <connections>
                                                     <action selector="SignUpButton_Tapped:" destination="IHl-qM-gyq" eventType="touchUpInside" id="hkb-Xj-Goy"/>
@@ -807,7 +808,7 @@
                                             </button>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Pt2-0a-x1W" firstAttribute="width" secondItem="gUc-xA-YiK" secondAttribute="width" multiplier="0.6" id="3G6-sM-HnO"/>
+                                            <constraint firstItem="Pt2-0a-x1W" firstAttribute="width" secondItem="gUc-xA-YiK" secondAttribute="width" multiplier="0.7" id="3G6-sM-HnO"/>
                                             <constraint firstAttribute="height" constant="40" id="rIQ-Hh-4KT"/>
                                         </constraints>
                                     </stackView>
@@ -821,6 +822,7 @@
                                 <constraints>
                                     <constraint firstItem="gUc-xA-YiK" firstAttribute="height" secondItem="tOa-UM-qss" secondAttribute="height" id="cP7-fd-8Os"/>
                                     <constraint firstItem="TYn-sd-kUR" firstAttribute="height" secondItem="tOa-UM-qss" secondAttribute="height" id="hcn-Fj-WQm"/>
+                                    <constraint firstItem="gUc-xA-YiK" firstAttribute="width" secondItem="iHh-qF-z3x" secondAttribute="width" id="rnd-9N-4r8"/>
                                     <constraint firstItem="H6S-pg-qJu" firstAttribute="height" secondItem="tOa-UM-qss" secondAttribute="height" id="tjo-Y8-iuX"/>
                                     <constraint firstItem="QsZ-im-N7m" firstAttribute="height" secondItem="tOa-UM-qss" secondAttribute="height" id="uYi-FZ-yD4"/>
                                 </constraints>

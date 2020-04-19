@@ -239,8 +239,11 @@
                                 <variation key="heightClass=regular-widthClass=compact" spacing="5"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hbY-uD-C8u">
-                                <rect key="frame" x="340" y="276" width="49" height="30"/>
-                                <state key="normal" title="Review"/>
+                                <rect key="frame" x="314" y="276" width="75" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="CD0-vu-KL7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <connections>
                                     <action selector="ReviewButton_Tapped:" destination="OpR-Wt-n8l" eventType="touchUpInside" id="0kv-De-WRB"/>
                                 </connections>
@@ -536,10 +539,10 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="w65-AJ-KWM">
                         <barButtonItem key="rightBarButtonItem" id="pqU-cl-rUC">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nt5-hj-kDR">
-                                <rect key="frame" x="282" y="7" width="112" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nt5-hj-kDR">
+                                <rect key="frame" x="371.66666666666669" y="11" width="22.333333333333314" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add/Edit Review"/>
+                                <state key="normal" image="plus.bubble.fill" catalog="system"/>
                                 <connections>
                                     <action selector="EditReviewNavBarButton_Tapped:" destination="gGL-OM-Fht" eventType="touchUpInside" id="lbg-1h-iRR"/>
                                 </connections>
@@ -803,7 +806,7 @@
                                                 <state key="normal" title="Sign up"/>
                                                 <connections>
                                                     <action selector="SignUpButton_Tapped:" destination="IHl-qM-gyq" eventType="touchUpInside" id="hkb-Xj-Goy"/>
-                                                    <segue destination="eTg-Ba-M82" kind="show" identifier="LoginToSignUp" id="Rmn-pK-4rF"/>
+                                                    <segue destination="eTg-Ba-M82" kind="push" identifier="LoginToSignUp" id="Rmn-pK-4rF"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -979,5 +982,6 @@
         <image name="person" catalog="system" width="64" height="58"/>
         <image name="person.circle" catalog="system" width="64" height="60"/>
         <image name="person.fill" catalog="system" width="64" height="60"/>
+        <image name="plus.bubble.fill" catalog="system" width="64" height="54"/>
     </resources>
 </document>

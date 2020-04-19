@@ -81,7 +81,11 @@ class EditReview_ViewController : UIViewController {
                         
                         //print(nickname)
                         
+                        // set nick name to Anonymous if there is no data
                         if nickname == nil {
+                            self.Nickname_Label.text = "Anonymous"
+                        }
+                        else if nickname == "" {
                             self.Nickname_Label.text = "Anonymous"
                         }
                         else{
@@ -104,7 +108,10 @@ class EditReview_ViewController : UIViewController {
         let content = self.ReviewContent_TextView.text ?? ""
         
         movieFirebaseModel.SetReviewByMovieIdByUserId(movieId: movieId, userId: userId, content: content) {
-            self.loadReviewInfoFromFirebase()
+            //self.loadReviewInfoFromFirebase()
+            
+            // transmit to review table
+            _ = self.navigationController?.popViewController(animated: true)
         }
     }
     

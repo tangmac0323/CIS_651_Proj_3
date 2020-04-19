@@ -39,6 +39,8 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
     var imageList: [String] = []        // store the image that will be posted in collection view
     var ratingVal: Float = 0
     var shapeLayer: CAShapeLayer?
+    
+    let movieReviewFirebaseModel = MovieReviewFirebaseModel()
        
     override func viewWillAppear(_ animated: Bool) {
         //self.view.layer.allowsGroupOpacity = true
@@ -115,6 +117,21 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
             }
             
             
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        // set the review count label
+        // get the review count
+        self.movieReviewFirebaseModel.getReviewCountByMovieId(movieId: self.movieId) { (reviewCounts) in
+            if reviewCounts == nil {
+                self.Review_Button.titleLabel?.text = "review (0)"
+            }
+            else{
+                let counts = reviewCounts!
+                self.Review_Button.titleLabel?.text = "review (\(String(describing: counts)))"
+            }
         }
     }
     

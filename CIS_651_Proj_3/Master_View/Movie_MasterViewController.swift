@@ -57,6 +57,13 @@ class MovieListScreenController: UIViewController, UITableViewDataSource, UITabl
         //print("JSON FNISHED")
     }
     
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        self.MovieTableView.reloadData()
+    }
+    
     // ALLOW TO DELETE
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true

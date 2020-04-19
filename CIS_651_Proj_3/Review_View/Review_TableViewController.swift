@@ -139,6 +139,9 @@ class Review_TablerViewController: UITableViewController {
                 if nickname == nil {
                     cell.Nickname_Label.text = "Anonymous"
                 }
+                else if nickname == "" {
+                    cell.Nickname_Label.text = "Anonymous"
+                }
                 else{
                     cell.Nickname_Label.text = nickname
                 }

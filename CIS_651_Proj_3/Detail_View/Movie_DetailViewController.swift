@@ -115,13 +115,11 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
                 //print("Reload Collection View")
                 self.MovieImageCollectionView.reloadData()
             }
-            
-            
+                        
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
         // set the review count label
         // get the review count
         self.movieReviewFirebaseModel.getReviewCountByMovieId(movieId: self.movieId) { (reviewCounts) in
@@ -133,6 +131,8 @@ class MovieDetailViewController: UIViewController, CAAnimationDelegate{
                 self.Review_Button.titleLabel?.text = "review (\(String(describing: counts)))"
             }
         }
+        
+        super.viewDidAppear(true)
     }
     
     override func didReceiveMemoryWarning() {

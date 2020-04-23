@@ -72,6 +72,11 @@ class Review_TablerViewController: UITableViewController {
     }
     
     func loadReviewDictFromFirebase(CompletionHandler: @escaping () -> Void) {
+        
+        
+        // docRef = db.collection("movies").document(movied).collection("reviews").document(userid)
+        
+        
         // create the data bundle for each table view cell
         self.movieFirebaseModel.RetrieveAllReviewsByMovieId(movieId: self.movieId, CompletionHandler: { querySnapshot, error in
             

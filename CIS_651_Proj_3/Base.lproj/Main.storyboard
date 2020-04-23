@@ -92,7 +92,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="NVO-Vl-4Cl">
                         <nil key="title"/>
-                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="jNf-fX-OUz" customClass="MovieSegController" customModule="CIS_651_Proj_3" customModuleProvider="target">
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" id="jNf-fX-OUz" customClass="MovieSegController" customModule="CIS_651_Proj_3" customModuleProvider="target">
                             <rect key="frame" x="15.666666666666657" y="6" width="383" height="32"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
@@ -145,10 +145,10 @@
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="MovieCVCell" id="KgX-Gv-lk3" customClass="MovieDetailCollectionViewCell" customModule="CIS_651_Proj_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-Kc-waY">
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-Kc-waY">
                                             <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-qG-ARM">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LoJ-qG-ARM">
                                                     <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                 </imageView>
                                             </subviews>
@@ -159,12 +159,6 @@
                                                 <constraint firstItem="LoJ-qG-ARM" firstAttribute="top" secondItem="V9e-Kc-waY" secondAttribute="top" id="j3v-d4-T86"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <constraints>
-                                            <constraint firstAttribute="bottomMargin" secondItem="V9e-Kc-waY" secondAttribute="bottom" constant="-8" id="3hc-iw-WIq"/>
-                                            <constraint firstItem="V9e-Kc-waY" firstAttribute="leading" secondItem="KgX-Gv-lk3" secondAttribute="leadingMargin" constant="-8" id="EcT-K2-Rq5"/>
-                                            <constraint firstItem="V9e-Kc-waY" firstAttribute="top" secondItem="KgX-Gv-lk3" secondAttribute="topMargin" constant="-8" id="NVw-tJ-3IF"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="V9e-Kc-waY" secondAttribute="trailing" constant="-8" id="VKL-2q-VKf"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="MovieDetailImage" destination="LoJ-qG-ARM" id="t7x-jc-eUf"/>
                                         </connections>
@@ -541,7 +535,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="w65-AJ-KWM">
                         <barButtonItem key="rightBarButtonItem" id="pqU-cl-rUC">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nt5-hj-kDR">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nt5-hj-kDR">
                                 <rect key="frame" x="371.66666666666669" y="11" width="22.333333333333314" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="plus.bubble.fill" catalog="system"/>

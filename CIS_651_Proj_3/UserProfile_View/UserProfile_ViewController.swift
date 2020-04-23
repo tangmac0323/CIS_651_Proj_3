@@ -124,6 +124,7 @@ class UserProfile_ViewController: UIViewController {
                         
                         // check if there is data in the document
                         if let userInfo = document.data() {
+                        // userInfo [String: Any]
                             // display first name
                             if let firstName = userInfo[MovieAppFirebaseConstants.UserDatabaseAttribute.FirstName] {
                                 self.FirstName_TextField.text? = firstName as! String

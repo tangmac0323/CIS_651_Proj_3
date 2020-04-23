@@ -87,11 +87,16 @@ class SignUp_ViewController: UIViewController{
     // fucntion to make segue transition to login screen from sign up screen
     // *********************************************************************************
     func SignUpScreenToLoginScreen() {
+        /*
         let loginVC = storyboard?.instantiateViewController(identifier:MovieAppFirebaseConstants.StoryboardId.LoginViewController) as? LoginMenu_ViewController
         
         
         self.view.window?.rootViewController = loginVC
         self.view.window?.makeKeyAndVisible()
+         */
+        
+        navigationController?.popToRootViewController(animated: true)
+        
     }
     
     @IBAction func SignUp_Tapped(_ sender: Any) {

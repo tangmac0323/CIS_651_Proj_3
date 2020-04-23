@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		643CB0F32447181100D0B00D /* EditReview_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643CB0F22447181100D0B00D /* EditReview_ViewController.swift */; };
+		64598F9F2450E57100D1FE10 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64598F9E2450E57000D1FE10 /* GoogleService-Info.plist */; };
 		64722A432405F40D00466ABE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64722A422405F40D00466ABE /* AppDelegate.swift */; };
 		64722A452405F40D00466ABE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64722A442405F40D00466ABE /* SceneDelegate.swift */; };
 		64722A4A2405F40D00466ABE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64722A482405F40D00466ABE /* Main.storyboard */; };
@@ -28,7 +29,6 @@
 		64BCAA452443BAA200CFC15C /* LoginMenu_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA442443BAA200CFC15C /* LoginMenu_ViewController.swift */; };
 		64BCAA482443BB5700CFC15C /* SignUp_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA472443BB5700CFC15C /* SignUp_ViewController.swift */; };
 		64BCAA4A2443C74B00CFC15C /* Authentication_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA492443C74B00CFC15C /* Authentication_Model.swift */; };
-		64BCAA4C2443D44900CFC15C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64BCAA4B2443D44900CFC15C /* GoogleService-Info.plist */; };
 		64BCAA4E24440AFF00CFC15C /* MovieAppFirebaseConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA4D24440AFF00CFC15C /* MovieAppFirebaseConstant.swift */; };
 		64BCAA5024461BFB00CFC15C /* UserProfileFirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA4F24461BFB00CFC15C /* UserProfileFirebaseModel.swift */; };
 		64BCAA52244679F900CFC15C /* MovieReviewFirebaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64BCAA51244679F900CFC15C /* MovieReviewFirebaseModel.swift */; };
@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		643CB0F22447181100D0B00D /* EditReview_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditReview_ViewController.swift; sourceTree = "<group>"; };
+		64598F9E2450E57000D1FE10 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64722A3F2405F40D00466ABE /* CIS_651_Proj_3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CIS_651_Proj_3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64722A422405F40D00466ABE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		64722A442405F40D00466ABE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +61,6 @@
 		64BCAA442443BAA200CFC15C /* LoginMenu_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginMenu_ViewController.swift; sourceTree = "<group>"; };
 		64BCAA472443BB5700CFC15C /* SignUp_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp_ViewController.swift; sourceTree = "<group>"; };
 		64BCAA492443C74B00CFC15C /* Authentication_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication_Model.swift; sourceTree = "<group>"; };
-		64BCAA4B2443D44900CFC15C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64BCAA4D24440AFF00CFC15C /* MovieAppFirebaseConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAppFirebaseConstant.swift; sourceTree = "<group>"; };
 		64BCAA4F24461BFB00CFC15C /* UserProfileFirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileFirebaseModel.swift; sourceTree = "<group>"; };
 		64BCAA51244679F900CFC15C /* MovieReviewFirebaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieReviewFirebaseModel.swift; sourceTree = "<group>"; };
@@ -123,9 +123,9 @@
 				64722A442405F40D00466ABE /* SceneDelegate.swift */,
 				64722A482405F40D00466ABE /* Main.storyboard */,
 				64722A4B2405F40E00466ABE /* Assets.xcassets */,
+				64598F9E2450E57000D1FE10 /* GoogleService-Info.plist */,
 				64722A4D2405F40E00466ABE /* LaunchScreen.storyboard */,
 				64722A502405F40E00466ABE /* Info.plist */,
-				64BCAA4B2443D44900CFC15C /* GoogleService-Info.plist */,
 			);
 			path = CIS_651_Proj_3;
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64722A4F2405F40E00466ABE /* LaunchScreen.storyboard in Resources */,
-				64BCAA4C2443D44900CFC15C /* GoogleService-Info.plist in Resources */,
+				64598F9F2450E57100D1FE10 /* GoogleService-Info.plist in Resources */,
 				64722A4C2405F40E00466ABE /* Assets.xcassets in Resources */,
 				64722A4A2405F40D00466ABE /* Main.storyboard in Resources */,
 			);
